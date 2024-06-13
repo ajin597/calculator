@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(50deg, #3a4452, #5c79a3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    background: #3a4452;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.calculator form {
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator form .display {
+    background-color: #5b9486;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.calculator form .display input {
+    border: none;
+    background-color: transparent;
+    font-size: 26px;
+    color: #3162a5;
+    width: 100%;
+    text-align: right;
+    box-shadow: none;
+}
+
+.calculator form .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.calculator form input {
+    border: 1px solid #333;
+    outline: 0;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background: #4f666b;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.calculator form input:hover {
+    background: #5b7486;
+}
+
+.calculator form input:active {
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+form input.equal {
+    background-color: #fb7c14;
+    color: #fff;
+    grid-column: span 2;
+}
+
+form input.operator {
+    color: #6dee0a;
+    background: #3a4452;
+}
+
+@media screen and (max-width: 600px) {
+    .calculator form input {
+        height: 45px;
+        font-size: 16px;
+    }
+    form .display input {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .calculator form input {
+        height: 50px;
+        font-size: 18px;
+    }
+    form .display input {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .calculator form input {
+        height: 60px;
+        font-size: 20px;
+    }
+    form .display input {
+        font-size: 26px;
+    }
+}
