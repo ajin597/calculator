@@ -33,6 +33,7 @@
     display: flex;
     justify-content: flex-end;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .calculator form .display input {
@@ -43,7 +44,10 @@
     width: 100%;
     text-align: right;
     box-shadow: none;
+    overflow-x: auto; /* Added this line */
+    white-space: nowrap; /* Added this line */
 }
+
 
 .calculator form .buttons {
     display: grid;
